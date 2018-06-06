@@ -1,5 +1,5 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import 'babel-polyfill'
+// babel-polyfill => es6转义
 import Vue from 'vue'
 import App from './App'
 import router from './router'
@@ -26,8 +26,6 @@ var axios_instance = axios.create({
     //   test: 'test'
     // },
 })
-
-
 Vue.use(VueAxios, axios_instance)
 
 
@@ -41,9 +39,11 @@ import './assets/font/iconfont.css'
 //   loading: require('./assets/logo.png')
 // })
 
+// 处理移动端300毫秒延迟
+import fastclick from 'fastclick'
+fastclick.attach(document.body)
 
 
-Vue.use(VueAxios, axios_instance)
 
 // 弹窗组件
 import { Alert, Confirm, Toast } from 'wc-messagebox'

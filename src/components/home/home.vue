@@ -1,28 +1,31 @@
 <template>
 <div class="home">
+<BScroll class="box_wrapper" ref="scroll">
+<div>
 	<div class="jd_layout">
 	    <!-- 头部搜索部分 -->
-	    <header class="jd_header">
-	    	<div class="jd_header_box">
-	    		<a href="#" class="icon_logo"></a>
-	    		<form action="#">
-	    			<span class="icon_search"></span>
-	    			<input type="search" placeholder="请输入搜索内容"/>
-	    		</form>
-	    		<a href="#" class="login">登录</a>
-	    	</div>
-	    </header>
+	    <!-- <mt-header title="产品">
+			  <router-link to="/" slot="left">
+			    <mt-button icon="back">返回</mt-button>
+			  </router-link>
+			  <mt-button icon="more" slot="right"></mt-button>
+			</mt-header> -->
 	    <!-- /头部搜索部分 -->
 			
 	    <!-- 轮播图部分 -->
 	    <swipe
 	    	v-model="index"
-	      style="text-align: center; line-height: 80px; height: 200px; background: #42b983;"
+	      style="text-align: center; line-height: 80px; height: 200px; background: #eee;"
 	      :autoplayTime = autoplayTime
 	    >
-	      <swipe-item style="height: 200px; line-height: 200px" 
-	      	v-for="(item,index) in slide_data" :key='item.id'>
-	      	<img src="../../assets/images/jd/l8.jpg" height=200>
+	      <swipe-item style="height: 200px; line-height: 200px">
+	      	<img src="../../assets/images/jd/banner1.jpg" height=200>
+	      </swipe-item>
+	      <swipe-item style="height: 200px; line-height: 200px">
+	      	<img src="../../assets/images/jd/banner2.jpg" height=200>
+	      </swipe-item>
+	      <swipe-item style="height: 200px; line-height: 200px">
+	      	<img src="../../assets/images/jd/banner3.jpg" height=200>
 	      </swipe-item>
 	    </swipe>
 	    <!-- /轮播图部分 -->
@@ -124,9 +127,13 @@
 	    <!-- /商品活动区块 -->
 	</div>
 </div>
+</BScroll>
+</div>
 </template>
 
 <script>
+import api from '../../assets/api/api.js'
+import BScroll from '../base/scroll/scroll'
 export default {
 	data() {
 		return {
@@ -140,19 +147,23 @@ export default {
 			title: 'home',
 		}
 	},
+	components: {
+		BScroll,
+	}
 }
 
 </script>
 
 <style scoped lang="less">
+@import url('../../assets/less/config.less');
+.box_wrapper{
+	top: 0;
+}
 .home{
 	/* 头部搜索部分 */
 	.jd_header {
 		width: 100%;
 		height: 40px;
-		position: fixed;
-		left: 0;
-		top: 0;
 		z-index: 999;
 	}
 	.jd_header .jd_header_box {
@@ -161,7 +172,7 @@ export default {
 		height: 40px;
 		margin: 0 auto;
 		position: relative;
-		background: rgba(0,0,0,.5);
+		background: rgba(0,0,0,.7);
 	}
 	.jd_header .jd_header_box .icon_logo {
 		background-position: 0 -103px;

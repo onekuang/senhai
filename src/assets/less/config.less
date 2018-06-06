@@ -1,5 +1,5 @@
-@header_height: 0;
-@footer_height: 56px;
+@header_height: 50px;
+@footer_height: 55px;
 // 个人信息背景
 @info_bg: #FF5252;
 
@@ -20,3 +20,99 @@
   overflow: hidden;
   background: #eee;
 }
+
+/*头部*/
+.mint-header{
+  height: 50px!important;
+  background-color:#474747;
+}
+
+// 个人信息
+.userinfo_box{
+  height: 150px;
+  padding-top: 25px;
+  background: linear-gradient(to right, #ff4d40 , #ff6464);
+  .userinfo_box_item{
+    color: #fff;
+    display: flex;
+    height: 100px;
+    // 头像部分
+    .avatar{
+      width: 120px;
+      flex: 0 0 120px;
+      padding-top: 10px;
+      position: relative;
+      text-align: center;
+      img{
+        border-radius: 50%;
+        box-shadow: 0px 0px 1px 1px #eee;
+      }
+    }
+    .k_username{
+      flex:1;
+      padding-top: 16px;
+      .p1{
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .p2{
+        font-size: 14px;
+      }
+      .span1{
+        display: inline-block;
+        height: 22px;
+        margin-top: 12px;
+        line-height: 22px;
+        padding: 0px 8px;
+        border-radius: 10px;
+        background: rgba(0,0,0,.2);
+        font-size: 12px;
+        i{
+          color: #ffed00;
+          margin-right: 8px;
+        }
+      }
+    }
+    .user_setting{
+      flex:1;
+      text-align: right;
+      padding-top: 20px;
+      .k_setting{
+        height: 26px;
+        line-height: 26px;
+        padding: 0 12px;
+        font-size: 12px;
+        display: inline-block;
+        color: #fff;
+        border-radius: 12px 0 0 12px;
+        background: rgba(0,0,0,.5);
+
+      }
+    }
+  }
+}
+// 个人信息end
+
+
+// 快速入口
+.speed_import_box{
+  // height: 60px;
+  padding: 10px 0;
+  background: #fff;
+  display: flex;
+  margin-bottom: 14px;
+  .item{
+    flex: 1;
+    text-align: center;
+    // height: 40px;
+    i{
+      font-size: 26px;
+    }
+    p{
+      font-size: 10px;
+      margin-top: 4px;
+    }
+  }
+}
+// 快速入口end
