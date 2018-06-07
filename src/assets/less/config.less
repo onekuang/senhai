@@ -1,4 +1,4 @@
-@header_height: 50px;
+@header_height: 0px;
 @footer_height: 55px;
 // 个人信息背景
 @info_bg: #FF5252;
@@ -21,6 +21,12 @@
   background: #eee;
 }
 
+.ell{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /*头部*/
 .mint-header{
   height: 50px!important;
@@ -38,8 +44,8 @@
     height: 100px;
     // 头像部分
     .avatar{
-      width: 120px;
-      flex: 0 0 120px;
+      width: 100px;
+      flex: 0 0 100px;
       padding-top: 10px;
       position: relative;
       text-align: center;
@@ -75,7 +81,8 @@
       }
     }
     .user_setting{
-      flex:1;
+      // flex:1;
+      flex: 0 0 100px;
       text-align: right;
       padding-top: 20px;
       .k_setting{
@@ -116,3 +123,9 @@
   }
 }
 // 快速入口end
+
+
+// 给通栏btn 添加点填充
+.btn_box{
+  padding: 8px;
+}

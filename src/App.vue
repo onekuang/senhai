@@ -10,6 +10,10 @@
         <img slot="icon" src="./assets/images/goods.png">
         产品
       </mt-tab-item>
+      <mt-tab-item id="/news">
+        <img slot="icon" src="./assets/images/goods.png">
+        新闻
+      </mt-tab-item>
       <mt-tab-item id="/users">
         <img slot="icon" src="./assets/images/my.png">
         我的
@@ -24,7 +28,7 @@ export default {
   name: 'App',
   data() {
   	return {
-  		selected: ''
+  		selected: '/'
   	}
   },
   methods: {
@@ -49,6 +53,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  
+}
+..mint-tabbar > .mint-tab-item.is-selected{
+  color: #ff564f;
 }
 </style>

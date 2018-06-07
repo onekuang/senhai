@@ -1,6 +1,6 @@
 <template>
 <div class="users">
-<mt-header title="个人中心"></mt-header>
+<!-- <mt-header title="个人中心"></mt-header> -->
 <BScroll class="box_wrapper" ref="scroll">
 <div>
 	<div class="mail">
@@ -14,12 +14,12 @@
 				<div class="k_username">
 					<p class="p1">白色曲章</p>
 					<p class="p2">手机：13421936693</p>
-					<!-- <span class="span1">
+					<span class="span1">
 						<i class="iconfont icon-crownfill"></i>普通会员
-					</span> -->
+					</span>
 				</div>
 				<div class="user_setting">
-					<router-link class="k_setting" to='/' tag='a'>
+					<router-link class="k_setting" to='edituser' tag='a'>
 						<i class="iconfont icon-shezhi"></i>
 						<span>帐号管理</span>
 					</router-link>
@@ -30,7 +30,7 @@
 
 		<!-- 快速入口 -->
 		<div class="speed_import_box">
-			<router-link class="item" tag='div' to='/'>
+			<router-link class="item" tag='div' to='/recharge'>
 				<i class="iconfont icon-iconset0292"></i>
 				<p>快速充值</p>
 			</router-link>
@@ -50,14 +50,24 @@
 		<!-- 快速入口 end -->
 		
 
-		<mt-cell  title="个人信息"  to="##"  is-link  value="带链接" />
-		<mt-cell  title="充值记录"  to="##"  is-link  value="带链接" />
-		<mt-cell  title="流量查询"  to="##"  is-link  value="带链接" />
+		<mt-cell title="个人信息"  to="##"  is-link>
+			<img slot="icon" src="../../assets/icon_png/user.png" width="24" height="24">
+		</mt-cell>
+		<mt-cell title="充值记录" to="##" is-link>
+			<img slot="icon" src="../../assets/icon_png/recharge.png" width="24" height="24">
+		</mt-cell>
+		<mt-cell title="流量查询" to="##" is-link>
+			<img slot="icon" src="../../assets/icon_png/liuliang.png" width="24" height="24">
+		</mt-cell>
 		<br>
-		<mt-cell  title="关于我们"  to="##"  is-link  value="带链接" />
+		<mt-cell title="关于我们" to="##" is-link>
+			<img slot="icon" src="../../assets/icon_png/about.png" width="24" height="24">
+		</mt-cell>
 
 		<br>
-		<mt-cell  title="退出登录"  @click.native='logout' />
+		<mt-cell  title="退出登录"  @click.native='logout'>
+			<img slot="icon" src="../../assets/icon_png/logout.png" width="24" height="24">
+		</mt-cell>
 	</div>
 </div>
 </BScroll>
@@ -77,6 +87,9 @@ export default {
 	methods: {
 		logout() {
 			console.log('注销')
+			this.$router.push({
+				path:'/login'
+			})
 		}
 	},
 	components: {
@@ -89,9 +102,4 @@ export default {
 
 <style scoped lang="less">
 @import url('../../assets/less/config.less');
-.users{
-	.mail{
-		
-	}
-}
 </style>

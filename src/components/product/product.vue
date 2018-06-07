@@ -1,7 +1,7 @@
 <template>
 <div class="product">
-	<mt-header title="产品">
-	</mt-header>
+	<!-- <mt-header title="产品">
+	</mt-header> -->
 <div class="pro_box">
 	<div class="pro_left_box">
 		<BScroll class='l_bs_box'>
@@ -21,10 +21,22 @@
 	<div class="pro_right_box">
 		<BScroll class='r_bs_box' ref='r_scroll'>
 			<div class="r_bs_item">
+				<div class="banner">
+					<img src="../../assets/images/jd/banner2.jpg" width="100%">
+				</div>
+				
 				<ul>
-				<li v-for='n in 10'>
-					<img src="../../assets/logo.png" width="60" height="60">
-					<p>产品名</p>
+				<li>
+					<img src="../../assets/01.jpg" width="60" height="60"><p>物联卡</p>
+				</li>
+				<li>
+					<img src="../../assets/02.jpg" width="60" height="60"><p>贴片卡</p>
+				</li>
+				<li>
+					<img src="../../assets/03.jpg" width="60" height="60"><p>陶瓷卡</p>
+				</li>
+				<li>
+					<img src="../../assets/04.jpg" width="60" height="60"><p>NB卡</p>
 				</li>
 			</ul>
 			</div>
@@ -43,10 +55,16 @@ export default {
 		return {
 			left_box_index: 0,
 			left_box: [
-				{id:1,name:'item1'},
-				{id:2,name:'item2'},
-				{id:3,name:'item3'},
-				{id:4,name:'item4'},
+				{id:1,name:'物联网卡'},
+				{id:2,name:'贴片卡'},
+				{id:3,name:'陶瓷卡'},
+				{id:4,name:'NB卡'},
+			],
+			right_box: [
+				{id:1,name:'物联网卡',img:''},
+				{id:2,name:'贴片卡',img:''},
+				{id:3,name:'陶瓷卡',img:''},
+				{id:4,name:'NB卡',img:''},
 			]
 		}
 	},
@@ -83,19 +101,20 @@ export default {
 			.l_bs_box{
 				width: 100px;
 				position: fixed;
-				top: 50px;
+				top: 0px;
 				left: 0;
 				right: 0;
 				bottom: 55px;
 				overflow: hidden;
 				.l_bs_item{
-					min-height: 101%
+					min-height: 101%;
+					background: #eee;
 				}
 			}
 			ul{
 				.active{
 					color: #E0313A;
-					border-bottom-color: #E0313A;
+					// border-bottom-color: #E0313A;
 					background: #fff;
 					border-top: #ccc;
 				}
@@ -114,13 +133,21 @@ export default {
 			margin-left: 4px;			
 			.r_bs_box{
 				position: fixed;
-				top: 50px;
-				left: 108px;
+				top: 0px;
+				left: 100px;
 				right: 0;
 				bottom: 55px;
 				overflow: hidden;
 				.r_bs_item{
 					min-height: 101%;
+					background: #fff;
+					.banner{
+						padding: 8px;
+						img{
+							border-radius: 8px;
+							box-shadow: 1px 1px 4px 2px rgba(0,0,0,.5);
+						}
+					}
 					ul{
 						display: flex;
 						flex-wrap: wrap;

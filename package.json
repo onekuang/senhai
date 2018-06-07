@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "senhai",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "onekuang <651776858@qq.com>",
@@ -23,6 +23,7 @@
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "mint-ui": "^2.2.13",
+    "muse-ui": "^3.0.0-beta.3",
     "style-loader": "^0.20.3",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.1",

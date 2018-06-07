@@ -66,6 +66,11 @@ Vue.component('swipe-item', SwipeItem);
 
 
 
+
+
+
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
