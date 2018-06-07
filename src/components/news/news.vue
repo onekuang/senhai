@@ -3,7 +3,7 @@
 <BScroll class="box_wrapper" ref="scroll">
 <div>
 	<div class="banner">
-		<img src="../../assets/images/jd/banner2.jpg" width="100%">
+		<img src="../../assets/images/news_banner.jpg" width="100%">
 	</div>
   <div class="box" v-for='(item, index) in news_data' @click='goto_article(index)'>
   	<div class="img">

@@ -22,21 +22,45 @@
 		<BScroll class='r_bs_box' ref='r_scroll'>
 			<div class="r_bs_item">
 				<div class="banner">
-					<img src="../../assets/images/jd/banner2.jpg" width="100%">
+					<img src="../../assets/images/pro_banner2.jpg" width="100%">
 				</div>
 				
 				<ul>
 				<li>
-					<img src="../../assets/01.jpg" width="60" height="60"><p>物联卡</p>
+					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
 				</li>
 				<li>
-					<img src="../../assets/02.jpg" width="60" height="60"><p>贴片卡</p>
+					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
 				</li>
 				<li>
-					<img src="../../assets/03.jpg" width="60" height="60"><p>陶瓷卡</p>
+					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
 				</li>
 				<li>
-					<img src="../../assets/04.jpg" width="60" height="60"><p>NB卡</p>
+					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
+				</li>
+				<li>
+					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
+				</li>
+				<li>
+					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
+				</li>
+				<li>
+					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
+				</li>
+				<li>
+					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
+				</li>
+				<li>
+					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
+				</li>
+				<li>
+					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
+				</li>
+				<li>
+					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
+				</li>
+				<li>
+					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
 				</li>
 			</ul>
 			</div>
@@ -160,6 +184,9 @@ export default {
 							margin-bottom: 12px;
 							img{
 								margin-bottom: 6px;
+							}
+							p{
+								color: #888;
 							}
 						}
 					}

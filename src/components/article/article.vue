@@ -4,17 +4,17 @@
 <div>
 <div class="article_box">
 
- <h1 class="title">我是个标题</h1>
+ <h1 class="title">我是个标题id={{id}}</h1>
  <p class="time">
- 	2011-11-11 11:22:33
+ 	{{k_time}}
  </p>
- <p class="content">
- 		this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....
- 		this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....
- 		this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....
- 		this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....
- 		this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....this is content....
- </p>
+ <div class="content">
+ 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repudiandae, commodi quae vitae minima. Tempore maxime consequatur mollitia, sunt laudantium harum veniam, excepturi, exercitationem sequi assumenda porro possimus modi repudiandae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+		<img src="../../assets/images/pro_banner2.jpg" alt="">
+ 		 atque dolore ad dolores esse sapiente numquam temporibus nemo, aperiam eligendi qui ea ullam iste laboriosam nostrum animi vel, laborum fugiat.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vitae asperiores ea perspiciatis exercitationem. Doloremque perferendis sit recusandae accusamus inventore eligendi sint alias minus ducimus quo explicabo, aliquid delectus itaque?
+		<img src="../../assets/images/pro_banner2.jpg" alt="">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem tenetur dolore molestiae fuga fugit nihil, obcaecati alias eius, ratione maxime! Atque libero blanditiis voluptatibus consequuntur magni itaque, iste enim! Eligendi!lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quos, voluptates placeat at vero tempora sunt nisi facilis dolor repudiandae incidunt excepturi reiciendis error autem ut, nam molestias eos commodi.
+ </div>
 
 </div>
 
@@ -27,11 +27,17 @@ import BScroll from '../base/scroll/scroll'
 export default {
 	data() {
 		return {
-
+			id:'',
+			k_time:'2011-11-11 11:22:33',
 		}
 	},
+	created() {
+		this._getdata()
+	},
 	methods: {
-
+		_getdata() {
+			this.id = this.$route.query.id
+		}
 	},
 	components: {
 		BScroll,
@@ -39,9 +45,10 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 @import url('../../assets/less/config.less');
 .article{
+	padding: 8px;
 	.article_box{
 		background: #fff;
 		padding: 12px;
@@ -58,6 +65,9 @@ export default {
 	.content{
 		text-indent: 1em;
 		font-size: 18px;
+		img{
+			max-width: 100%;
+		}
 	}
 }
 </style>

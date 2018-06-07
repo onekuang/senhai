@@ -4,6 +4,7 @@ import Home from '@/components/home/home'
 import Product from '@/components/product/product'
 import News from '@/components/news/news'
 import Article from '@/components/article/article'
+import Aboutus from '@/components/aboutus/aboutus'
 
 import Users from '@/components/users/users'
 import EditUsers from '@/components/users/edit_user'
@@ -25,13 +26,14 @@ export default new Router({
     {path: '/product', component: Product},
     {path: '/news', component: News},
     {path: '/article', component: Article},
+    {path: '/aboutus', component: Aboutus},
 
     {path: '/users', component: Users},
     {path: '/edituser', component: EditUsers},
     {path: '/editphone', component: EditPhone},
     {path: '/editusername', component: EditUsername},
     {path: '/editpassword', component: EditPassword},
-    
+
     {path: '/recharge', component: Recharge},
 
     {path: '/login', component: Login},

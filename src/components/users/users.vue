@@ -12,7 +12,7 @@
 					<img src="../../assets/images/test.png" height="80" width="80">
 				</div>
 				<div class="k_username">
-					<p class="p1">白色曲章</p>
+					<p class="p1">奥斯里斯</p>
 					<p class="p2">手机：13421936693</p>
 					<span class="span1">
 						<i class="iconfont icon-crownfill"></i>普通会员
@@ -36,31 +36,31 @@
 			</router-link>
 			<router-link class="item" tag='div' to='/'>
 				<i class="iconfont icon-lianjie"></i>
-				<p>快速充值</p>
+				<p>占位</p>
 			</router-link>
 			<router-link class="item" tag='div' to='/'>
 				<i class="iconfont icon-wodedingdan"></i>
-				<p>快速充值</p>
+				<p>占位</p>
 			</router-link>
 			<router-link class="item" tag='div' to='/'>
 				<i class="iconfont icon-yaoqingma"></i>
-				<p>快速充值</p>
+				<p>占位</p>
 			</router-link>
 		</div>
 		<!-- 快速入口 end -->
 		
 
-		<mt-cell title="个人信息"  to="##"  is-link>
+		<mt-cell title="个人信息"  to="/users"  is-link>
 			<img slot="icon" src="../../assets/icon_png/user.png" width="24" height="24">
 		</mt-cell>
-		<mt-cell title="充值记录" to="##" is-link>
+		<mt-cell title="充值记录" to="/users" is-link>
 			<img slot="icon" src="../../assets/icon_png/recharge.png" width="24" height="24">
 		</mt-cell>
-		<mt-cell title="流量查询" to="##" is-link>
+		<mt-cell title="流量查询" to="/users" is-link>
 			<img slot="icon" src="../../assets/icon_png/liuliang.png" width="24" height="24">
 		</mt-cell>
 		<br>
-		<mt-cell title="关于我们" to="##" is-link>
+		<mt-cell title="关于我们" to="/aboutus" is-link>
 			<img slot="icon" src="../../assets/icon_png/about.png" width="24" height="24">
 		</mt-cell>
 
@@ -87,9 +87,19 @@ export default {
 	methods: {
 		logout() {
 			console.log('注销')
-			this.$router.push({
-				path:'/login'
+			this.$confirm({
+				title: '确认注销?'
 			})
+			.then(res => {
+				this.$router.push({
+					path:'/'
+				})	
+			})
+			.catch(fail => {
+				console.log('取消')
+			})
+			return
+			
 		}
 	},
 	components: {

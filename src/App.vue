@@ -54,7 +54,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-..mint-tabbar > .mint-tab-item.is-selected{
-  color: #ff564f;
+.mint-tabbar > .mint-tab-item.is-selected{
+  color: #8A8A8A;
 }
 </style>

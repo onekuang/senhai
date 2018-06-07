@@ -4,28 +4,32 @@
 <div>
 	<div class="jd_layout">
 	    <!-- 头部搜索部分 -->
-	    <!-- <mt-header title="产品">
-			  <router-link to="/" slot="left">
-			    <mt-button icon="back">返回</mt-button>
-			  </router-link>
-			  <mt-button icon="more" slot="right"></mt-button>
-			</mt-header> -->
-	    <!-- /头部搜索部分 -->
+        <!-- <header class="jd_header">
+        	<div class="jd_header_box">
+        		<a href="#" class="icon_logo"></a>
+        		<form action="#">
+        			<span class="icon_search"></span>
+        			<input type="search" placeholder="请输入搜索内容"/>
+        		</form>
+        		<a href="#" class="login">登录</a>
+        	</div>
+        </header> -->
+        <!-- /头部搜索部分 -->
 			
 	    <!-- 轮播图部分 -->
 	    <swipe
 	    	v-model="index"
 	      style="text-align: center; line-height: 80px; height: 200px; background: #eee;"
 	      :autoplayTime = autoplayTime
-	    >
+	    > 
 	      <swipe-item style="height: 200px; line-height: 200px">
-	      	<img src="../../assets/images/jd/banner1.jpg" height=200>
+	      	<img src="../../assets/images/jd/banner1.jpg" width="100%" height=200>
 	      </swipe-item>
 	      <swipe-item style="height: 200px; line-height: 200px">
-	      	<img src="../../assets/images/jd/banner2.jpg" height=200>
+	      	<img src="../../assets/images/jd/banner2.jpg" width="100%" height=200>
 	      </swipe-item>
 	      <swipe-item style="height: 200px; line-height: 200px">
-	      	<img src="../../assets/images/jd/banner3.jpg" height=200>
+	      	<img src="../../assets/images/jd/banner3.jpg" width="100%" height=200>
 	      </swipe-item>
 	    </swipe>
 	    <!-- /轮播图部分 -->
@@ -34,39 +38,45 @@
 	    <nav class="jd_nav">
 	    	<ul>
 	    		<li>
-	    			<router-link to='##' tag='a'>
-	    				<img src="../../assets/images/jd/nav0.png" alt="">
+	    			<router-link to='/product' tag='a'>
+	    				<img src="../../assets/icon_png/4.png" >
+	    				<p>产品中心</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/product' tag='a'>
+	    				<img src="../../assets/icon_png/3.png" >
+	    				<p>订单查询</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/recharge' tag='a'>
+	    				<img src="../../assets/icon_png/2.png" >
+	    				<p>流量充值</p>
+	    			</router-link></li>
+	    		<li><router-link to='/aboutus' tag='a'>
+	    				<img src="../../assets/icon_png/1.png" >
+	    				<p>关于我们</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/product' tag='a'>
+	    				<img src="../../assets/icon_png/8.png" >
+	    				<p>成功案例</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/news' tag='a'>
+	    				<img src="../../assets/icon_png/7.png" >
+	    				<p>新闻动态</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/product' tag='a'>
+	    				<img src="../../assets/icon_png/6.png" >
+	    				<p>核心优势</p>
+	    			</router-link>
+	    		</li>
+	    		<li><router-link to='/product' tag='a'>
+	    				<img src="../../assets/icon_png/5.png" >
 	    				<p>分类查询</p>
 	    			</router-link>
 	    		</li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav1.png" alt="">
-	    				<p>流量充值</p>
-	    			</a></li>
-	    		<li><a href="cart.html">
-	    				<img src="../../assets/images/jd/nav2.png" alt="">
-	    				<p>订单查询</p>
-	    			</a></li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav3.png" alt="">
-	    				<p>产品中心</p>
-	    			</a></li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav4.png" alt="">
-	    				<p>成功案例</p>
-	    			</a></li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav5.png" alt="">
-	    				<p>行业动态</p>
-	    			</a></li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav6.png" alt="">
-	    				<p>核心优势</p>
-	    			</a></li>
-	    		<li><a href="#">
-	    				<img src="../../assets/images/jd/nav7.png" alt="">
-	    				<p>关于我们</p>
-	    			</a></li>
 	    	</ul>
 	    </nav>
 	    <!-- /nav导航部分 -->
@@ -81,21 +91,21 @@
 	    			<ul class="clearfix">
 	    				<li>
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" alt=""></div> 
+	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" ></div> 
 	    					    <p class="now_price">&yen;20.00</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a>      					
 	    				</li>
 	    				<li>        					
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail01.jpg" alt=""></div> 
+	    					    <div class="img_box"><img src="../../assets/images/jd/detail01.jpg" ></div> 
 	    					    <p class="now_price">&yen;20.00</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a>        					     
 	    				</li>
 	    				<li>
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" alt=""></div> 
+	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" ></div> 
 	    					    <p class="now_price">&yen;20.00</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a> 
@@ -108,9 +118,9 @@
 	    			<h3>产品中心</h3>
 	    		</div>
 	    		<div class="product_bot clearfix">
-	    			<a href="#" class="p_left b_right"><img src="../../assets/images/jd/cp1.jpg" alt=""></a>
-	    			<a href="#" class="p_right b_bottom"><img src="../../assets/images/jd/cp2.jpg" alt=""></a>
-	    			<a href="#" class="p_right"><img src="../../assets/images/jd/cp3.jpg" alt=""></a>
+	    			<a href="#" class="p_left b_right"><img src="../../assets/images/jd/cp1.jpg" ></a>
+	    			<a href="#" class="p_right b_bottom"><img src="../../assets/images/jd/cp2.jpg" ></a>
+	    			<a href="#" class="p_right"><img src="../../assets/images/jd/cp3.jpg" ></a>
 	    		</div>
 	    	</section>
 	    	<section class="jd_product_box jd_pd">
@@ -118,9 +128,9 @@
 	    			<h3>精选案例</h3>
 	    		</div>
 	    		<div class="product_bot clearfix">
-	    			<a href="#" class="p_right b_left"><img src="../../assets/images/jd/cp4.jpg" alt=""></a>
-	    			<a href="#" class="p_left b_bottom"><img src="../../assets/images/jd/cp5.jpg" alt=""></a>
-	    			<a href="#" class="p_left"><img src="../../assets/images/jd/cp6.jpg" alt=""></a>
+	    			<a href="#" class="p_right b_left"><img src="../../assets/images/jd/cp4.jpg" ></a>
+	    			<a href="#" class="p_left b_bottom"><img src="../../assets/images/jd/cp5.jpg" ></a>
+	    			<a href="#" class="p_left"><img src="../../assets/images/jd/cp6.jpg" ></a>
 	    		</div>
 	    	</section>
 	    </main>
@@ -172,7 +182,7 @@ export default {
 		height: 40px;
 		margin: 0 auto;
 		position: relative;
-		background: rgba(0,0,0,.7);
+		background: rgb(224, 49, 58);
 	}
 	.jd_header .jd_header_box .icon_logo {
 		background-position: 0 -103px;
