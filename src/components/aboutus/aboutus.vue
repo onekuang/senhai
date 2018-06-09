@@ -3,7 +3,7 @@
 <BScroll class="box_wrapper" ref="scroll">
 <div>
 	<div class="banner">
-		<img src="../../assets/images/aboutus.jpg" width="100%">
+		<img src="../../assets/images/aboutus.jpg" width="100%" @load="imgload">
 	</div>
 <div class="article_box">
  <h1 class="title">深圳市森海时代科技有限公司</h1>
@@ -24,6 +24,9 @@
  		<p><a href="tel:17768081744">17768081744</a></p>
  </div>
 
+ <!-- map -->
+	<k_map />
+
 </div>
 
 </div></BScroll>
@@ -32,6 +35,7 @@
 
 <script>
 import BScroll from '../base/scroll/scroll'
+import k_map from '../base/map/map'
 export default {
 	data() {
 		return {
@@ -39,12 +43,15 @@ export default {
 		}
 	},
 	methods: {
-
+		imgload() {
+			this.$refs.scroll.refresh()
+		}
 	},
 	components: {
-		BScroll,
+		BScroll,k_map
 	}
 }
+
 </script>
 
 <style scoped lang="less">

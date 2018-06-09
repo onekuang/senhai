@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <mt-tabbar v-model="selected">
+<!--     <mt-tabbar v-model="selected">
       <mt-tab-item id="/">
         <img slot="icon" src="./assets/images/home.png">
         主页
@@ -18,12 +18,16 @@
         <img slot="icon" src="./assets/images/my.png">
         我的
       </mt-tab-item>
-    </mt-tabbar>
+    </mt-tabbar> -->
+    <div class="footer">
+      <k_footer></k_footer>
+    </div>
   </div>
 </template>
 
 <script>
 import { Tabbar, TabItem } from 'mint-ui';
+import k_footer from './components/base/footer/footer'
 export default {
   name: 'App',
   data() {
@@ -42,7 +46,8 @@ export default {
   },
   components: {
   	Tabbar,
-  	TabItem
+  	TabItem,
+    k_footer
   }
 }
 </script>
@@ -56,5 +61,12 @@ export default {
 }
 .mint-tabbar > .mint-tab-item.is-selected{
   color: #8A8A8A;
+}
+.footer{
+  height: 50px;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>

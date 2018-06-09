@@ -34,15 +34,15 @@
 				<i class="iconfont icon-iconset0292"></i>
 				<p>快速充值</p>
 			</router-link>
-			<router-link class="item" tag='div' to='/'>
+			<router-link class="item" tag='div' to='/recharge'>
 				<i class="iconfont icon-lianjie"></i>
 				<p>占位</p>
 			</router-link>
-			<router-link class="item" tag='div' to='/'>
+			<router-link class="item" tag='div' to='/recharge'>
 				<i class="iconfont icon-wodedingdan"></i>
 				<p>占位</p>
 			</router-link>
-			<router-link class="item" tag='div' to='/'>
+			<router-link class="item" tag='div' to='/recharge'>
 				<i class="iconfont icon-yaoqingma"></i>
 				<p>占位</p>
 			</router-link>
@@ -50,13 +50,13 @@
 		<!-- 快速入口 end -->
 		
 
-		<mt-cell title="个人信息"  to="/users"  is-link>
+		<mt-cell title="个人信息"  to="/userinfo"  is-link>
 			<img slot="icon" src="../../assets/icon_png/user.png" width="24" height="24">
 		</mt-cell>
-		<mt-cell title="充值记录" to="/users" is-link>
+		<mt-cell title="充值记录" to="/rechargelist" is-link>
 			<img slot="icon" src="../../assets/icon_png/recharge.png" width="24" height="24">
 		</mt-cell>
-		<mt-cell title="流量查询" to="/users" is-link>
+		<mt-cell title="我的物联卡" to="/flowlist" is-link>
 			<img slot="icon" src="../../assets/icon_png/liuliang.png" width="24" height="24">
 		</mt-cell>
 		<br>

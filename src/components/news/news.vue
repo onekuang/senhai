@@ -3,11 +3,11 @@
 <BScroll class="box_wrapper" ref="scroll">
 <div>
 	<div class="banner">
-		<img src="../../assets/images/news_banner.jpg" width="100%">
+		<img src="../../assets/images/news_banner.jpg" width="100%" @load="imgload">
 	</div>
   <div class="box" v-for='(item, index) in news_data' @click='goto_article(index)'>
   	<div class="img">
-  		<img src="../../assets/03.jpg" width="100" height="100">
+  		<img src="../../assets/3.png" width="100" height="100">
   	</div>
   	<div class="info">
   		<h3 class="title">新卡上市新卡上市新卡上市新卡上市新卡上市</h3>
@@ -42,6 +42,9 @@ export default {
 			this.$router.push({
 				path: `/article?id=${index}`
 			})
+		},
+		imgload() {
+			this.$refs.scroll.refresh()
 		}
 	},
 	components: {
@@ -75,7 +78,7 @@ export default {
 			flex: 1;
 			.title{
 				margin-top: 6px;
-				max-width: 220px;
+				max-width: 65%;
 				.ell();
 			}
 			.time{

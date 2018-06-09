@@ -8,17 +8,19 @@
 		<div class="userinfo_box">
 			<div class="userinfo_box_item">
 				<div class="avatar">
-					<img src="../../assets/images/test.png" height="80" width="80">
+					<!-- <img src="../../assets/images/test.png" height="80" width="80"> -->
+					<img :src="arvatar" height="80" width="80">
 					<input type="hidden" value="" name="logo"  >
 		  		<input type="file" @change="upload($event)" style="display: none;" ref="upload" id='upload' accept="image/*">
 				</div>
 				<div class="k_username">
-					<p class="p1">白色曲章</p>
+					<p class="p1">奥斯里斯</p>
 					<p class="p2">手机：13421936693</p>
 					<span class="span1">
 						<i class="iconfont icon-crownfill"></i>普通会员
 					</span>
 				</div>
+
 				<div class="user_setting">
 					<router-link class="k_setting" to='users' tag='a'>
 						<i class="iconfont icon-peoplefill"></i>
@@ -29,7 +31,7 @@
 		</div>
 		<!-- 个人信息展示 end-->
 
-		
+		<p>{{arvatar}}</p>
 
 		<mt-cell  title="修改头像"  @click.native="addPicFront" />
 		<mt-cell  title="修改昵称"  to="/editusername"  is-link  />
@@ -51,7 +53,6 @@ export default {
 	data() {
 		return {
 			arvatar:'',
-			headerImage:'',
 			picValue:'' ,
 			sta: 0,
 		}
@@ -93,13 +94,13 @@ export default {
 	          img.src = result;  
 	          //判断图片是否大于100K,是就直接上传，反之压缩图片  
 	          if (this.result.length <= (100 * 1024)) {  
-	            self.headerImage = this.result;  
-	            self.postImg(self.headerImage);  
+	            self.arvatar = this.result;  
+	            self.postImg(self.arvatar);  
 	          }else {  
 	            img.onload = function () {  
 	              let data = self.compress(img,Orientation);  
-	              self.headerImage = data;  
-	              self.postImg(self.headerImage);  
+	              self.arvatar = data;  
+	              self.postImg(self.arvatar);  
 	            }  
 	          }  
 	        }   

@@ -27,40 +27,40 @@
 				
 				<ul>
 				<li>
-					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
+					<img src="../../assets/1.png" width="70" height="70"><p>物联卡</p>
 				</li>
 				<li>
-					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
+					<img src="../../assets/2.jpg" width="70" height="70"><p>贴片卡</p>
 				</li>
 				<li>
-					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
+					<img src="../../assets/3.png" width="70" height="70"><p>陶瓷卡</p>
 				</li>
 				<li>
-					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
+					<img src="../../assets/4.png" width="70" height="70"><p>NB卡</p>
 				</li>
 				<li>
-					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
+					<img src="../../assets/1.png" width="70" height="70"><p>物联卡</p>
 				</li>
 				<li>
-					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
+					<img src="../../assets/2.jpg" width="70" height="70"><p>贴片卡</p>
 				</li>
 				<li>
-					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
+					<img src="../../assets/3.png" width="70" height="70"><p>陶瓷卡</p>
 				</li>
 				<li>
-					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
+					<img src="../../assets/4.png" width="70" height="70"><p>NB卡</p>
 				</li>
 				<li>
-					<img src="../../assets/01.jpg" width="70" height="70"><p>物联卡</p>
+					<img src="../../assets/1.png" width="70" height="70"><p>物联卡</p>
 				</li>
 				<li>
-					<img src="../../assets/02.jpg" width="70" height="70"><p>贴片卡</p>
+					<img src="../../assets/2.jpg" width="70" height="70"><p>贴片卡</p>
 				</li>
 				<li>
-					<img src="../../assets/03.jpg" width="70" height="70"><p>陶瓷卡</p>
+					<img src="../../assets/3.png" width="70" height="70"><p>陶瓷卡</p>
 				</li>
 				<li>
-					<img src="../../assets/04.jpg" width="70" height="70"><p>NB卡</p>
+					<img src="../../assets/4.png" width="70" height="70"><p>NB卡</p>
 				</li>
 			</ul>
 			</div>

@@ -43,9 +43,9 @@
 	    				<p>产品中心</p>
 	    			</router-link>
 	    		</li>
-	    		<li><router-link to='/product' tag='a'>
+	    		<li><router-link to='/rechargelist' tag='a'>
 	    				<img src="../../assets/icon_png/3.png" >
-	    				<p>订单查询</p>
+	    				<p>充值记录</p>
 	    			</router-link>
 	    		</li>
 	    		<li><router-link to='/recharge' tag='a'>
@@ -57,9 +57,9 @@
 	    				<p>关于我们</p>
 	    			</router-link>
 	    		</li>
-	    		<li><router-link to='/product' tag='a'>
+	    		<li><router-link to='/case' tag='a'>
 	    				<img src="../../assets/icon_png/8.png" >
-	    				<p>成功案例</p>
+	    				<p>行业案例</p>
 	    			</router-link>
 	    		</li>
 	    		<li><router-link to='/news' tag='a'>
@@ -67,7 +67,7 @@
 	    				<p>新闻动态</p>
 	    			</router-link>
 	    		</li>
-	    		<li><router-link to='/product' tag='a'>
+	    		<li><router-link to='/hexin' tag='a'>
 	    				<img src="../../assets/icon_png/6.png" >
 	    				<p>核心优势</p>
 	    			</router-link>
@@ -91,22 +91,22 @@
 	    			<ul class="clearfix">
 	    				<li>
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" ></div> 
-	    					    <p class="now_price">&yen;20.00</p>
+	    					    <div class="img_box"><img src="../../assets/1.png" ></div> 
+	    					    <p class="now_price">物联卡</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a>      					
 	    				</li>
 	    				<li>        					
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail01.jpg" ></div> 
-	    					    <p class="now_price">&yen;20.00</p>
+	    					    <div class="img_box"><img src="../../assets/3.png" ></div> 
+	    					    <p class="now_price">陶瓷卡</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a>        					     
 	    				</li>
 	    				<li>
 	    					<a href="#">
-	    					    <div class="img_box"><img src="../../assets/images/jd/detail02.jpg" ></div> 
-	    					    <p class="now_price">&yen;20.00</p>
+	    					    <div class="img_box"><img src="../../assets/4.png" ></div> 
+	    					    <p class="now_price">贴片卡</p>
 	    					    <p class="old_price">&yen;200.00</p>
 	    					</a> 
 	    				</li>
@@ -118,9 +118,9 @@
 	    			<h3>产品中心</h3>
 	    		</div>
 	    		<div class="product_bot clearfix">
-	    			<a href="#" class="p_left b_right"><img src="../../assets/images/jd/cp1.jpg" ></a>
-	    			<a href="#" class="p_right b_bottom"><img src="../../assets/images/jd/cp2.jpg" ></a>
-	    			<a href="#" class="p_right"><img src="../../assets/images/jd/cp3.jpg" ></a>
+	    			<router-link to="/product" class="p_left b_right"><img src="../../assets/images/case/006_02.jpg" ></router-link>
+	    			<router-link to="/product" class="p_right b_bottom"><img src="../../assets/images/case/006_01.jpg" ></router-link>
+	    			<router-link to="/product" class="p_right"><img src="../../assets/images/case/006_03.jpg" ></router-link>
 	    		</div>
 	    	</section>
 	    	<section class="jd_product_box jd_pd">
@@ -128,9 +128,20 @@
 	    			<h3>精选案例</h3>
 	    		</div>
 	    		<div class="product_bot clearfix">
-	    			<a href="#" class="p_right b_left"><img src="../../assets/images/jd/cp4.jpg" ></a>
-	    			<a href="#" class="p_left b_bottom"><img src="../../assets/images/jd/cp5.jpg" ></a>
-	    			<a href="#" class="p_left"><img src="../../assets/images/jd/cp6.jpg" ></a>
+	    			<router-link to="/case" class="p_right b_left"><img src="../../assets/case1.jpg" ></router-link>
+	    			<router-link to="/case"  class="p_left b_bottom"><img src="../../assets/case3.jpg" ></router-link>
+	    			<router-link to="/case"  class="p_left"><img src="../../assets/case2.jpg" ></router-link>
+	    		</div>
+	    	</section>
+
+	    	<section class="jd_product_box jd_pd">
+	    		<div class="product_top">
+	    			<h3>合作伙伴</h3>
+	    		</div>
+	    		<div class="k_link_box">
+	    			<a href=""><img src="../../assets/images/case/hz_01.jpg" width="100%"></a>
+	    			<a href=""><img src="../../assets/images/case/hz_02.jpg" width="100%"></a>
+	    			<a href=""><img src="../../assets/images/case/hz_03.jpg" width="100%"></a>
 	    		</div>
 	    	</section>
 	    </main>
@@ -338,7 +349,7 @@ export default {
 		color: #888;
 		font-size: 12px;
 		text-align: center;
-		text-decoration: line-through;
+		// text-decoration: line-through;
 		margin-top: 3px;
 	}
 
@@ -365,6 +376,14 @@ export default {
 	.jd_product .jd_pd .product_bot a img {
 		width: 100%;
 		display: block;
+	}
+	.k_link_box{
+		display: flex;
+		flex-wrap: wrap;
+		a{
+			width: 33%;
+			flex: 0 0 33%;
+		}
 	}
 }
 </style>
