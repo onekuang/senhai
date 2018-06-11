@@ -44,6 +44,8 @@ export default {
 
 .k_footer{
 	height: 50px;
+	background: #fff;
+	z-index: 999;
 	.k_footer_box{
 		display: flex;
 		color: #666;

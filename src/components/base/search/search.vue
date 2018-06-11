@@ -12,7 +12,7 @@ export default {
   props: {
     placeholder: {
       type: String,
-      default: '输入卡号'
+      default: '输入卡号/ICCID号码'
     }
   },
   data() {

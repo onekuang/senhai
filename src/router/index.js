@@ -15,6 +15,8 @@ import EditPhone from '@/components/users/edit_phone'
 import EditUsername from '@/components/users/edit_username'
 import EditPassword from '@/components/users/edit_password'
 
+import Seek from '@/components/seek/seek'
+
 import Recharge from '@/components/recharge/recharge'
 import RechargeList from '@/components/recharge_list/recharge_list'
 import FlowList from '@/components/flow_list/flow_list'
@@ -37,6 +39,7 @@ export default new Router({
     {path: '/article', component: Article},
     {path: '/aboutus', component: Aboutus},
     {path: '/hexin', component: Hexin},
+    {path: '/seek', component: Seek},
 
     {path: '/users', component: Users},
     {path: '/userinfo', component: UsersInfo},

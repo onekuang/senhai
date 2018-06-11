@@ -1,6 +1,5 @@
 <template>
 <div class="users">
-<!-- <mt-header title="个人中心"></mt-header> -->
 <BScroll class="box_wrapper" ref="scroll">
 <div>
 	<div class="mail">
@@ -34,9 +33,9 @@
 				<i class="iconfont icon-iconset0292"></i>
 				<p>快速充值</p>
 			</router-link>
-			<router-link class="item" tag='div' to='/recharge'>
-				<i class="iconfont icon-lianjie"></i>
-				<p>占位</p>
+			<router-link class="item" tag='div' to='/seek'>
+				<i class="iconfont icon-wxbsousuotuiguang"></i>
+				<p>快速搜索</p>
 			</router-link>
 			<router-link class="item" tag='div' to='/recharge'>
 				<i class="iconfont icon-wodedingdan"></i>

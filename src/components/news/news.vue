@@ -1,6 +1,12 @@
 <template>
 <div class="news ab_full">
-<BScroll class="box_wrapper" ref="scroll">
+<BScroll 
+	class="box_wrapper" 
+	ref="scroll" 
+	:data="news_data"
+	:pullup = "true"
+	@scrollToEnd='onscroll' 
+>
 <div>
 	<div class="banner">
 		<img src="../../assets/images/news_banner.jpg" width="100%" @load="imgload">
@@ -10,7 +16,7 @@
   		<img src="../../assets/3.png" width="100" height="100">
   	</div>
   	<div class="info">
-  		<h3 class="title">新卡上市新卡上市新卡上市新卡上市新卡上市</h3>
+  		<h3 class="title">{{item.title}}</h3>
   		<p class="time">2022年12月22日</p>
   		<p class="description">到这里其实绘制底部选项卡和webview模实原理是一样的，也可以在manifest.json中配置，但是考虑到水平中央的图标涉及屏幕分辨率动态计算目前放在首页plusReady事件中配置，也给开发者一种可以手动绘制view控件的方法，如果你想在非首页采用这种方法呢</p>
   	</div>
@@ -29,6 +35,8 @@ import BScroll from '../base/scroll/scroll'
 export default {
 	data() {
 		return {
+			start_page:1,
+			end_page:3,
 			news_data:[
 				{id:1,title:'title',time:'2022年12月22日',info:'descrition..'},
 				{id:2,title:'title',time:'2022年12月22日',info:'descrition..'},
@@ -45,6 +53,15 @@ export default {
 		},
 		imgload() {
 			this.$refs.scroll.refresh()
+		},
+		onscroll() {
+			if(this.start_page == this.end_page){
+				this.$refs.scroll.$emit('infinitescroll.loadedDone'); 
+				return
+			}
+			this.news_data.push({id:1,title:'上拉加载',time:'2022年12月22日',info:'descrition..'},)
+			this.start_page ++;
+			this.$refs.scroll.$emit('infinitescroll.finishLoad'); 
 		}
 	},
 	components: {
@@ -76,9 +93,9 @@ export default {
 		}
 		.info{
 			flex: 1;
+			min-width: 60%;
 			.title{
 				margin-top: 6px;
-				max-width: 65%;
 				.ell();
 			}
 			.time{

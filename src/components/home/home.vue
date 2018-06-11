@@ -113,7 +113,7 @@
 	    			</ul>
 	    		</div>
 	    	</section>
-	    	<section class="jd_product_box jd_pd">
+	   <!--  	<section class="jd_product_box jd_pd">
 	    		<div class="product_top">
 	    			<h3>产品中心</h3>
 	    		</div>
@@ -122,7 +122,20 @@
 	    			<router-link to="/product" class="p_right b_bottom"><img src="../../assets/images/case/006_01.jpg" ></router-link>
 	    			<router-link to="/product" class="p_right"><img src="../../assets/images/case/006_03.jpg" ></router-link>
 	    		</div>
+	    	</section> -->
+
+	    	
+	    	<section class="jd_product_box jd_pd">
+	    		<div class="product_top">
+	    			<h3>公司简介</h3>
+	    		</div>
+	    		<div class="product_bot clearfix">
+	    			<router-link to="/aboutus" class="">
+	    				<img src="../../assets/images/about_banner.jpg" >
+	    			</router-link>
+	    		</div>
 	    	</section>
+	    	
 	    	<section class="jd_product_box jd_pd">
 	    		<div class="product_top">
 	    			<h3>精选案例</h3>
