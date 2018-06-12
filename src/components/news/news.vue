@@ -3,7 +3,6 @@
 <BScroll 
 	class="box_wrapper" 
 	ref="scroll" 
-	:data="news_data"
 	:pullup = "true"
 	@scrollToEnd='onscroll' 
 >

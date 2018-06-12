@@ -7,6 +7,7 @@ import News from '@/components/news/news'
 import Article from '@/components/article/article'
 import Aboutus from '@/components/aboutus/aboutus'
 import Hexin from '@/components/aboutus/hexin'
+import Notive from '@/components/notive/notive'
 
 import Users from '@/components/users/users'
 import UsersInfo from '@/components/users/userinfo'
@@ -39,6 +40,7 @@ export default new Router({
     {path: '/article', component: Article},
     {path: '/aboutus', component: Aboutus},
     {path: '/hexin', component: Hexin},
+    {path: '/notive', component: Notive},
     {path: '/seek', component: Seek},
 
     {path: '/users', component: Users},

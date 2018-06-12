@@ -4,16 +4,8 @@
 <div>
 
 	<p class="pp">选择卡类型:</p>
-<!-- 	<mt-field 
-		label="卡类型：" 
-		placeholder="请选择卡类型" 
-		type="text" 
-		v-model="card" 
-		@click.native='_toggle'
-	/> -->
 	<div class="select_card">
-		<!-- <span class="span1">卡类型：</span> -->
-		<span class="span2" @click='_toggle'>{{card | defu}}</span>
+		<mt-field placeholder="请输入卡号" v-model="card_num"></mt-field>
 	</div>
 	<p class="pp">充流量:</p>
 	<div class="money_select_box">
@@ -27,9 +19,11 @@
 		</div>
 	</div>
 	<p class="pp">金额:</p>
+
 	<div class="money_box">
 		<p ><span>￥</span>{{money}}</p>
 	</div>
+	
 	<div class="btn_box" style="background: #fff;">
 	  <mt-button 
 	  	type='danger'  
@@ -47,22 +41,18 @@
 
 
 </div></BScroll>
-	<mt-actionsheet
-  :actions="actions"
-  v-model="sheetVisible">
-	</mt-actionsheet>
 </div>
 </template>
 
 <script>
-import { Field, Button, Actionsheet   } from 'mint-ui'; 
+import { Field, Button, } from 'mint-ui'; 
 import BScroll from '../base/scroll/scroll'
 export default {
 	data() {
 		return {
-			indx: -1,
-			card: '0',
+			card_num: '',
 			money: 0,
+			indx:-1,
 			select_data:[
 				{id:1,name:'100元',mes:'充值100送50'},
 				{id:2,name:'200元',mes:'充值100送50'},
@@ -71,40 +61,34 @@ export default {
 				{id:5,name:'1000元',mes:'充值100送50'},
 			],
 			sheetVisible:false,
-			actions:[
-				{name:'物联卡',method : (val => { this.card = val.name})},
-				{name:'NB卡',method : (val => { this.card = val.name})},
-				{name:'陶瓷卡',method : (val => { this.card = val.name})},
-			]
 		}
 	},
 	methods: {
-		_toggle() {
-			this.sheetVisible = true
-		},
 		get_moneydata(index,name) {
 			this.indx = index
 			this.money = name
 		},
 		send_form() {
-			if(this.card == 0) {
-				this.$toast('卡类型不能为空 ')
+			if(this.card_num == '') {
+				this.$toast('卡号不能为空 ')
+				return
 			}
 			if(!this.money) {
 				this.$toast('金额不能为 0 ')
 				return
 			}
-			console.log(this.card)
+			let self = this
+			this.$confirm({
+				title: '确认为卡号' + self.card_num + "充值?"
+			})
+			.then(res => {
+				console.log(res)
+			})
+			.catch(fail =>{
+				console.log(fail)
+			})
+			console.log(this.card_num)
 			console.log(this.money)
-		}
-	},
-	filters: {
-		defu: function(val) {
-			if(val == 0) {
-				return '请选择卡类型'
-			}else{
-				return val
-			}
 		}
 	},
 	components: {

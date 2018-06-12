@@ -9,8 +9,8 @@
 
 		<div class="order_des">
 			<div class="des_item">
-				<div class="key">商品说明</div>
-				<div class="val">陶瓷卡</div>
+				<div class="key">卡号</div>
+				<div class="val">xxxx-xxxx-xxxx-xxxx</div>
 			</div>
 			<div class="des_item">
 				<div class="key">支付方式</div>
@@ -24,7 +24,7 @@
 			<div class="des_item">
 				<div class="key">订单号</div>
 				<div class="val">12345678900</div>
-			</div>
+			</div>            
 		</div>
 	</div>
 </div>

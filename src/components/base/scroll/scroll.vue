@@ -97,7 +97,7 @@ export default {
       // 是否派发滚动到底部事件，用于上拉加载  
       if(this.pullup){  
         this.scroll.on('scrollEnd',() => {  
-          if(this.scroll.y <= (this.scroll.maxScrollY + 50)){  
+          if(this.scroll.y <= (this.scroll.maxScrollY)){  
             //所有数据加载完毕后  
             this.$on('infinitescroll.loadedDone', () => {  
                 this.isLoading = false;  

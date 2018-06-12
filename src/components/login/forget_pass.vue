@@ -15,7 +15,7 @@
     </mt-field>
     <br><br>
     <div class="btn_box">
-      <mt-button type='danger'  style='width: 100%;'>
+      <mt-button type='danger'  style='width: 100%;' @click.native="forget">
         确定更改
       </mt-button>
     </div>
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import {kk} from '../../common/js/k_form.js'
 import { Field, Button  } from 'mint-ui'; 
 import api from '../../assets/api/api.js'
 import BScroll from '../base/scroll/scroll'
@@ -50,14 +51,38 @@ export default {
     }
   },
   methods: {
+    forget() {
+      if(!kk.is_password(this.password1, this)){return}
+      if(this.password1 !== this.password2) {
+        this.$toast('两次密码不一致');return;
+      }
+      if(!kk.is_mobile(this.mobile,this)){return}
+      if(this.code == ''){
+        this.$toast('验证码错误')
+        return
+      }
+
+      console.log('请求')
+    },
     getcode() {
+      if(!kk.is_mobile(this.mobile,this)){return}
+
+      let that = this
+      this.code_disabled = true
+      let time = setInterval(()=>{
+        that.code_time--
+        if(that.code_time <= 0){
+          window.clearInterval(time);
+          that.code_disabled = false
+          that.code_time = 60
+        }
+      },1000)
+
       console.log('get code...')
     }
   },
   components: {
-    BScroll,
-    Button,
-    'k_field'   : Field ,
+    BScroll,Button,Field ,
   }
 }
 </script>

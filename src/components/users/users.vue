@@ -37,13 +37,9 @@
 				<i class="iconfont icon-wxbsousuotuiguang"></i>
 				<p>快速搜索</p>
 			</router-link>
-			<router-link class="item" tag='div' to='/recharge'>
-				<i class="iconfont icon-wodedingdan"></i>
-				<p>占位</p>
-			</router-link>
-			<router-link class="item" tag='div' to='/recharge'>
-				<i class="iconfont icon-yaoqingma"></i>
-				<p>占位</p>
+			<router-link class="item" tag='div' to='/notive'>
+				<i class="iconfont icon-gonggaoguanli"></i>
+				<p>公告信息</p>
 			</router-link>
 		</div>
 		<!-- 快速入口 end -->
